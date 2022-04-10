@@ -107,3 +107,11 @@ ul.join_box {
     background-color: lightsalmon;
     color: #fff
 }
+
+.fpmgBt1:hover {
+    font-weight: 700;
+}
+
+.fpmgBt2:hover {
+    font-weight: 700;
+}

@@ -7,41 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>약관동의</title>
     <link rel="stylesheet" href="../css/signup-terms.css">
-
     <script>
-        window.onload = function () {
-            const checkAll = document.getElementById('chkAll');
-            const chks = document.querySelectorAll('.chk');
-            const chkBoxLength = chks.length;
 
-            checkAll.addEventListener('click', function (event) {
-                if (event.target.checked) {
-                    chks.forEach(function (value) {
-                        value.checked = true;
-                    })
-                } else {
-                    chks.forEach(function (value) {
-                        value.checked = false;
-                    })
-                }
+        function selectAll(selectAll) {
+            const checkBoxs = document.getElementsByName('chk');
+
+            checkBoxs.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
             });
-            for (chk of chks) {
-                chk.addEventListener('click', function () {
-                    let count = 0;
-                    chks.forEach(function (value) {
-                        if (value.checked == true) {
-                            count++;
-                        }
-                    })
-                    if (count !== chkBoxLength) {
-                        checkAll.checked = false;
-                    } else {
-                        checkAll.checked = true;
-                    }
-                })
+        }
+
+        function newPage() {
+            window.location.href = '../login/signup.html'
+        }
+        function cansalePage() {
+            window.location.href = '../index.html'
+        }
+
+        function is_checked() {
+            const ck_1 = document.getElementById('chk_1');
+            const ck_2 = document.getElementById('chk_2');
+
+            const ck_flag1 = ck_1.checked;
+            const ck_flag2 = ck_2.checked;
+
+            if (ck_flag1 != true || ck_flag2 != true) {
+                alert('약관 동의를 확인해 주세요');
+            } else {
+                newPage();
             }
         }
+
     </script>
+
 
 </head>
 
@@ -54,7 +52,8 @@
                     <li>이용약관, 개인정보수집 및 이용<br>
                         위치정보 이용약관(선택)</li>
                     <li class="checkAllBtn">
-                        <input type="checkbox" name="chkAll" id="chk" class="chkAll"><span>전체 선택</span>
+                        <input type="checkbox" name="chk" id="chk" class="chkAll" onclick="selectAll(this)"><span>전체
+                            선택</span>
                     </li>
                 </ul>
             </li>
@@ -62,7 +61,7 @@
                 <ul class="clearfix">
                     <li>이용약관 동의(필수)</li>
                     <li class="checkBtn">
-                        <input type="checkbox" name="chk">
+                        <input type="checkbox" id="chk_1" name="chk">
                     </li>
                 </ul>
                 <textarea name="" id="">제1조(목적) 이 약관은 업체 회사(전자상거래 사업자)가 운영하는 업체 사이버 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리․의무 및
@@ -343,7 +342,7 @@
                 <ul class="clearfix">
                     <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
                     <li class="checkBtn">
-                        <input type="checkbox" name="chk">
+                        <input type="checkbox" id="chk_2" name="chk">
                     </li>
                 </ul>
 
@@ -506,7 +505,7 @@
                 <ul class="clearfix">
                     <li>위치정보 이용약관 동의(선택)</li>
                     <li class="checkBtn">
-                        <input type="checkbox" name="chk">
+                        <input type="checkbox" name="chkname">
                     </li>
                 </ul>
 
@@ -593,25 +592,21 @@
                 부칙
                 제 1 조 시행일
                 2015년 11월 26일부터 시행되던 종전의 약관은 본 약관으로 대체하며, 본 약관은 2022년 4월 27일부터 적용됩니다.
-       </textarea>
-            </li>
-            <li class="checkBox check04">
-                <ul class="clearfix">
-                    <li class="checkBtn">
-                        <input type="checkbox" name="chk">
-                    </li>
-                </ul>
-
+                </textarea>
             </li>
         </ul>
+
+
         <ul class="footBtwrap clearfix">
-            <li><button class="fpmgBt1">비동의</button></li>
-            <li><button class="fpmgBt2">동의</button></li>
+            <li><button type="button" class="fpmgBt1" onclick="cansalePage()">취소</button></li>
+            <li><button type="button" class="fpmgBt2" onclick="is_checked()">동의</button></li>
         </ul>
     </form>
 
 
-
 </body>
+
+
+
 
 </html>
