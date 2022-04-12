@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +13,8 @@
 <body>
 
 
-    <a href="./login/signin.html">로그인 페이지</a>
-    <a href="./login/signup-terms.html">회원가입 페이지</a>
+    <a href="/auth/signin">로그인 페이지</a>
+    <a href="/auth/signup_term">회원가입 페이지</a>
 
 
     <h1>일기장 메인페이지 입니다~ <구현중>
