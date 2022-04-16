@@ -115,3 +115,12 @@ ul.join_box {
 .fpmgBt2:hover {
     font-weight: 700;
 }
+
+@media (max-height : 850px) {
+
+    #joinForm {
+        width: 460px;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+}
