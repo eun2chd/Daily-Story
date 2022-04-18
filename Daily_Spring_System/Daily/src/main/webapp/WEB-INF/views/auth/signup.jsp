@@ -41,7 +41,7 @@
 
                             <tr>
                                 <th><span>닉네임</span></th>
-                                <td><input type="text" placeholder="2~6 글자 이내로 입력해주세요" onclick="verifyEmail()"></td>
+                                <td><input type="text" placeholder="2~6 글자 이내로 입력해주세요" onclick="verifyEmail()" onfocus = "verifyEmail()"></td>
 
                             </tr>
                             <tr>
