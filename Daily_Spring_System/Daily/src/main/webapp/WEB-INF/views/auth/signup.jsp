@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/signup.css">
+      <script src="/js/signup.js"></script>
     <title>회원가입</title>
 </head>
 
@@ -28,13 +29,20 @@
                             <col width="auto" />
                         </colgroup>
                         <tbody>
-                            <tr>
+                              <tr>
                                 <th><span>아이디</span></th>
-                                <td><input type="text" placeholder="이메일주소"></td>
+                                <td><input id="email" type="text" placeholder="이메일주소"></td>
+                                <td>
+                                    <span class="email_Check_result">
+                                        <img src="" class="check_Img">
+                                    </span>
+                                </td>
                             </tr>
+
                             <tr>
-                                <th><span>이름</span></th>
-                                <td><input type="text" placeholder="(실명입력)"></td>
+                                <th><span>닉네임</span></th>
+                                <td><input type="text" placeholder="2~6 글자 이내로 입력해주세요" onclick="verifyEmail()"></td>
+
                             </tr>
                             <tr>
                                 <th><span>비밀번호</span></th>

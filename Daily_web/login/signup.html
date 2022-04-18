@@ -28,14 +28,21 @@
                         <tbody>
                             <tr>
                                 <th><span>아이디</span></th>
-                                <td><input id="email" type="text" placeholder="이메일주소">
+                                <td><input id="email" type="text" placeholder="이메일주소"></td>
+                                <td>
+                                    <span class="email_Check_result">
+                                        <img src="" class="check_Img">
+                                    </span>
                                 </td>
                             </tr>
 
                             <tr>
                                 <th><span>이름</span></th>
                                 <td><input type="text" placeholder="(실명입력)" onclick="verifyEmail()"></td>
+
                             </tr>
+
+
                             <tr>
                                 <th><span>비밀번호</span></th>
                                 <td><input type="text" placeholder="비밀번호를 입력해주세요."></td>
@@ -60,10 +67,14 @@
                             </tr>
 
                         </tbody>
+
+
                     </table>
+
                     <div class="btn_wrap">
                         <a href="#">다음</a>
                     </div>
+
                 </div>
             </div> <!-- form_txtInput E -->
         </div><!-- content E-->

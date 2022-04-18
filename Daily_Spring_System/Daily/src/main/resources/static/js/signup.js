@@ -10,11 +10,11 @@ window.onload = function () {
         console.log(emailVal);
 
         if (emailVal.match(regExp) != null) {
-            $Img.src = "../imges/check.png"
+            $Img.src = "/imges/check.png"
 
         }
         else {
-            $Img.src = "../imges/remove.png"
+            $Img.src = "/imges/remove.png"
         }
 
         if (emailVal != null) {

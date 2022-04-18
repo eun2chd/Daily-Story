@@ -61,6 +61,12 @@ ul {
     list-style: none;
 }
 
+td {
+    width: 65%;
+}
+
+
+
 
 
 /* 전체 틀 */
@@ -82,7 +88,7 @@ ul {
 
 .form_txtInput {
     width: 100%;
-    height: 80%;
+    /* height: 80%; */
     text-align: center;
 
 }
@@ -95,6 +101,23 @@ ul {
     color: #2f2f2f;
     font-size: 25px;
 }
+
+
+.email_Check_result {
+    font-size: 9px;
+    height: 55px;
+    display: block;
+    line-height: 55px;
+    position: relative;
+    right: 50px;
+    top : 13px;
+}
+
+.email_Check_result img {
+    width: 95%;
+}
+
+
 
 /* ------- */
 
@@ -269,8 +292,6 @@ ul {
 
 
 @media (max-width: 1023px) {
-
-
     .wrap {
         margin: 30px auto;
     }
@@ -290,6 +311,15 @@ ul {
         height: 90%;
         background-color: #fff;
 
+    }
+
+    .email_Check_result {
+        font-size: 9px;
+        height: 55px;
+        display: block;
+        line-height: 55px;
+        position: relative;
+        right: 25px;
     }
 
     .join_form {
@@ -400,18 +430,53 @@ ul {
         margin: 0;
     }
 
+    .email_Check_result {
+        font-size: 9px;
+        height: 55px;
+        display: block;
+        line-height: 55px;
+        position: relative;
+        right: 15px;
+        top: 8px;
+    }
+
+    .email_Check_result img {
+        width: 60%;
+    }
+
 }
 
-@media (max-height : 860px) {
+@media (max-width : 420px) {
+    .email_Check_result {
+        font-size: 9px;
+        height: 55px;
+        display: block;
+        line-height: 55px;
+        position: relative;
+        right: 3px;
+        top: 8px;
+    }
+
+    .email_Check_result img {
+        width: 60%;
+    }
+}
+
+@media (max-height : 920px) {
 
     .container {
         display: flex;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: #fff;
+        border-radius: 0%;
     }
 
+    .form_txtInput {
+        width: 100%;
+        text-align: center
+    }
 
 
 }
