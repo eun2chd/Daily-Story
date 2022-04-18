@@ -63,6 +63,8 @@ ul {
 
 
 
+
+
 /* 전체 틀 */
 .wrap {
     display: flex;
@@ -95,6 +97,16 @@ ul {
     color: #2f2f2f;
     font-size: 25px;
 }
+
+
+.email_Check_result {
+    font-size: 13px;
+    height: 55px;
+    display: block;
+    line-height: 55px;
+}
+
+
 
 /* ------- */
 

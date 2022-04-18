@@ -11,7 +11,6 @@ public class PageController {
 		return "index";
 	}
 	
-	
 	// 로그인 페이지 호출
 	@GetMapping("/auth/signin")
 	public String signinForm() {

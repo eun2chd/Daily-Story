@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/signup.css">
     <title>회원가입</title>
+    <script src="../js/signup.js"></script>
+    <script src="https://kit.fontawesome.com/582f2d7ab6.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -25,11 +28,13 @@
                         <tbody>
                             <tr>
                                 <th><span>아이디</span></th>
-                                <td><input type="text" placeholder="이메일주소"></td>
+                                <td><input id="email" type="text" placeholder="이메일주소">
+                                </td>
                             </tr>
+
                             <tr>
                                 <th><span>이름</span></th>
-                                <td><input type="text" placeholder="(실명입력)"></td>
+                                <td><input type="text" placeholder="(실명입력)" onclick="verifyEmail()"></td>
                             </tr>
                             <tr>
                                 <th><span>비밀번호</span></th>
@@ -57,13 +62,16 @@
                         </tbody>
                     </table>
                     <div class="btn_wrap">
-                        <a href="javascript:;">다음</a>
+                        <a href="#">다음</a>
                     </div>
                 </div>
             </div> <!-- form_txtInput E -->
         </div><!-- content E-->
     </div> <!-- container E -->
 
+
+
 </body>
+
 
 </html>
